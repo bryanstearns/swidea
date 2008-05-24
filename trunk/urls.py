@@ -1,9 +1,9 @@
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^swidea/', include('swidea.foo.urls')),
+    # Enable the admin interface
+    (r'^admin/', include('django.contrib.admin.urls')),
 
-    # Uncomment this for admin:
-     (r'^admin/', include('django.contrib.admin.urls')),
+    # Delegate everything else
+    (r'', include('swidea.idea.urls')),
 )
