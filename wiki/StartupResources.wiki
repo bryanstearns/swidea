@@ -11,18 +11,19 @@ www.angelsoft.net
       * Tutorials
 
 http://sourceforge.net/
-     * Desciption:
-SourceForge.net is the world's largest Open Source software development web site. SourceForge.net provides free hosting to Open Source software development projects with a centralized resource for managing projects, issues, communications, and code. 
-
+     * Desciption:  SourceForge.net is the world's largest Open Source software development web site. SourceForge.net provides free hosting to Open Source software development projects with a centralized resource for managing projects, issues, communications, and code. 
 
 
 Code.google.com
 
-
-
 Trac
+
 Jumpbox.com
-Ideablob.com
+
+http://www.ideablob.com/
+     * Desciption: Ideablob.com is a community of small business owners and entrepreneurs who bounce ideas off each other. They give feedback, advice and much-needed encouragement. Every month, the community votes on the best idea. The winner gets $10,000 to help their idea grow. 
+
+
 Palo Alto Software
 Filinginoregon.org
 Myvidoop.com
