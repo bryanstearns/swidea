@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
 
   create_table "ideas", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,18 @@ ActiveRecord::Schema.define(:version => 4) do
 
   create_table "skills", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "name"
+    t.string   "summary"
+    t.integer  "owner_id"
+    t.text     "description"
+    t.date     "due"
+    t.integer  "priority"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "user_skills", :force => true do |t|
