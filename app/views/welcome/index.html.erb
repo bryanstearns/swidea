@@ -12,8 +12,12 @@
 <div id="mainleft">
 <h2>Ideas</h2>
 <ol>
-  <li>Have Idea</li>
-  <li>See Idea</li>
+  <% if @ideas.empty? %>
+  <p>(New ideas coming soon!)</p>
+  <% else %>
+    <%= render :partial => @ideas %>
+  <% end %>
+  <%= link_to "Add your idea", new_idea_url if logged_in? %>
 </ol>
 </div>
 <div id="maincenter">
@@ -31,9 +35,3 @@
   <li>See Concrete</li>
 </ol>
 </div>
-
-<% if logged_in? %>
-  <% render :partial => @pages %>
-  <%= link_to "Create a page", new_page_url() %>
-<% end %>
-
