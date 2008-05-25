@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @pages = Page.find(:all)
-    @ideas = Idea.find(:all, :order => :updated_at)
+    @ideas = Idea.find(:all, :order => "created_at desc")
+    @users = User.find(:all, :order => "created_at desc")
   end
 end
