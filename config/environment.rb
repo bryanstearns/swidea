@@ -3,8 +3,8 @@
 # Uncomment below to force Rails into production mode when
 # you don't control web/app server and can't set it the proper way
 # ENV['RAILS_ENV'] ||= 'production'
-if RAILS_ROOT.starts_with? '/var/rails'
-  path = RAILS_ROOT.split('/')
+if __FILE__  =~ /^\/var\/rails/
+  path = __FILE__.split('/')
   app_with_env = path[3]
   ENV['RAILS_ENV'] = app_with_env[app_with_env.rindex(".")+1 .. -1]
 end

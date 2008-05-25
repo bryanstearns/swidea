@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 3) do
+ActiveRecord::Schema.define(:version => 4) do
 
   create_table "ideas", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(:version => 3) do
     t.datetime "updated_at"
   end
 
+  create_table "skills", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "user_skills", :force => true do |t|
+    t.integer "user_id"
+    t.integer "skill_id"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40
     t.string   "name",                      :limit => 100, :default => ""
@@ -38,6 +47,8 @@ ActiveRecord::Schema.define(:version => 3) do
     t.datetime "updated_at"
     t.string   "remember_token",            :limit => 40
     t.datetime "remember_token_expires_at"
+    t.string   "buzzwords"
+    t.string   "url"
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true

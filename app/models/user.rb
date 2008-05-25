@@ -5,6 +5,14 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
+  # Useful has_many :through info:
+  # http://paulbarry.com/articles/2007/10/24/has_many-through-checkboxes
+  # http://blog.hasmanythrough.com/2006/2/28/association-goodness
+  has_many :user_skills, :dependent => :destroy
+  has_many :skills, :through => :user_skills
+
+  attr_accessor :skill_ids
+  after_save :update_skills
 
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
@@ -24,7 +32,9 @@ class User < ActiveRecord::Base
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :name, :password, :password_confirmation
+  attr_accessible :login, :email, :name, 
+                  :url, :buzzwords, :skill_ids, 
+                  :password, :password_confirmation
 
 
 
@@ -41,6 +51,18 @@ class User < ActiveRecord::Base
 
   protected
     
-
+  def update_skills
+    unless skill_ids.nil?
+      self.user_skills.each do |us|
+        us.destroy unless user_skills.include?(us.skill_id.to_s)
+        skill_ids.delete(us.skill_id.to_s)
+      end
+      skill_ids.each do |s|
+        self.user_skills.create(:skill_id => s) unless s.blank?
+      end
+      reload
+      self.skill_ids = nil
+    end
+  end
 
 end
