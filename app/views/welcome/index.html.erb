@@ -21,15 +21,20 @@
 			  <% else %>
 			    <%= render :partial => @ideas %>
 			  <% end %>
-			  <%= link_to "More..", ideas_path if logged_in? %><br/>
+			  <%= link_to "More..", ideas_path %><br/>
 			  <%= link_to "Add your idea!", new_idea_path if logged_in? %>
 			</ol>
     	</td>
     	<td>    		
 			<h2>People</h2>
 			<ol>
-			  <li>See People</li>
-			  <li>See People</li>
+			  <% if @users.empty? %>
+			  <p>(Sign up! You can be first!)</p>
+			  <% else %>
+			    <%= render :partial => @users %>
+			  <% end %>
+			  <%= link_to "More..", users_path %><br/>
+			  <%= link_to "Sign up!", signup_path unless logged_in? %>
 			</ol>
     	</td>
     	<td>    		
