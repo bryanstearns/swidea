@@ -10,6 +10,11 @@ www.angelsoft.net
       * Case Studies
       * Tutorials
 
+http://www.bnet.com/
+      *  Desciption:  Website owned by C/net providing comprehensive business management information and resources
+
+
+
 http://sourceforge.net/
      * Desciption:  SourceForge.net is the world's largest Open Source software development web site. SourceForge.net provides free hosting to Open Source software development projects with a centralized resource for managing projects, issues, communications, and code. 
 
@@ -33,17 +38,10 @@ Myvidoop.com
 www.score.org    Description:  SCORE "Counselors to America's Small Business" is a nonprofit association dedicated to educating entrepreneurs and the formation, growth and success of small business nationwide. SCORE is a resource partner with the U.S. Small Business Administration (SBA).
 
 Additional Score Resources:
-
-* Mentoring Services
-
-* How-To
-
-* Business Tools 
-
-* Resource Links
-
-* Template Gallery
-
-* Business Quizzes
-
-* Tip of the Day
+    * Mentoring Services
+    * How-To
+    * Business Tools 
+    * Resource Links
+    * Template Gallery
+    * Business Quizzes
+    * Tip of the Day
