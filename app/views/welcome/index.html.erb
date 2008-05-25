@@ -1,0 +1,39 @@
+
+<h1>Welcome to Idea2Profit</h1>
+
+<% if logged_in? %>
+  Hi, <%= current_user.login %>...
+    <%= link_to "Log out", logout_url %>
+<% else %>
+  <%= link_to "Log in", login_url %>
+  <%= link_to "Sign up", signup_url %>
+<% end %>
+
+<div id="mainleft">
+<h2>Ideas</h2>
+<ol>
+  <li>Have Idea</li>
+  <li>See Idea</li>
+</ol>
+</div>
+<div id="maincenter">
+<h2>People</h2>
+<ol>
+  <li>See People</li>
+  <li>See People</li>
+</ol>
+</div>
+<div id="mainright">
+<h2>Concrete</h2>
+<ol>
+  <li>See Concrete</li>
+  <li>See Concrete</li>
+  <li>See Concrete</li>
+</ol>
+</div>
+
+<% if logged_in? %>
+  <% render :partial => @pages %>
+  <%= link_to "Create a page", new_page_url() %>
+<% end %>
+
