@@ -1,0 +1,49 @@
+
+<% content_for :header do %>
+<h1>Welcome to Idea2Profit</h1>
+<% end %>
+
+<% if logged_in? %>
+  Hi, <%= current_user.login %>...
+    <%= link_to "Log out", logout_path %>
+<% else %>
+  <%= link_to "Log in", login_path %>
+  <%= link_to "Sign up", signup_path %>
+<% end %>
+
+<table id="mainbox">
+    <tr>
+    	<td>    		
+			<h2>Ideas</h2>
+			<ol>
+			  <% if @ideas.empty? %>
+			  <p>(New ideas coming soon!)</p>
+			  <% else %>
+			    <%= render :partial => @ideas %>
+			  <% end %>
+			  <%= link_to "More..", ideas_path %><br/>
+			  <%= link_to "Add your idea!", new_idea_path if logged_in? %>
+			</ol>
+    	</td>
+    	<td>    		
+			<h2>People</h2>
+			<ol>
+			  <% if @users.empty? %>
+			  <p>(Sign up! You can be first!)</p>
+			  <% else %>
+			    <%= render :partial => @users %>
+			  <% end %>
+			  <%= link_to "More..", users_path %><br/>
+			  <%= link_to "Sign up!", signup_path unless logged_in? %>
+			</ol>
+    	</td>
+    	<td>    		
+			<h2>Concrete</h2>
+			<ol>
+			  <li>See Concrete</li>
+			  <li>See Concrete</li>
+			  <li>See Concrete</li>
+			</ol>
+    	</td>
+    </tr>
+</table>
