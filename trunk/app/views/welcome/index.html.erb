@@ -1,37 +1,44 @@
 
+<% content_for :header do %>
 <h1>Welcome to Idea2Profit</h1>
+<% end %>
 
 <% if logged_in? %>
   Hi, <%= current_user.login %>...
-    <%= link_to "Log out", logout_url %>
+    <%= link_to "Log out", logout_path %>
 <% else %>
-  <%= link_to "Log in", login_url %>
-  <%= link_to "Sign up", signup_url %>
+  <%= link_to "Log in", login_path %>
+  <%= link_to "Sign up", signup_path %>
 <% end %>
 
-<div id="mainleft">
-<h2>Ideas</h2>
-<ol>
-  <% if @ideas.empty? %>
-  <p>(New ideas coming soon!)</p>
-  <% else %>
-    <%= render :partial => @ideas %>
-  <% end %>
-  <%= link_to "Add your idea", new_idea_url if logged_in? %>
-</ol>
-</div>
-<div id="maincenter">
-<h2>People</h2>
-<ol>
-  <li>See People</li>
-  <li>See People</li>
-</ol>
-</div>
-<div id="mainright">
-<h2>Concrete</h2>
-<ol>
-  <li>See Concrete</li>
-  <li>See Concrete</li>
-  <li>See Concrete</li>
-</ol>
-</div>
+<table id="mainbox">
+    <tr>
+    	<td>    		
+			<h2>Ideas</h2>
+			<ol>
+			  <% if @ideas.empty? %>
+			  <p>(New ideas coming soon!)</p>
+			  <% else %>
+			    <%= render :partial => @ideas %>
+			  <% end %>
+			  <%= link_to "More..", ideas_path if logged_in? %><br/>
+			  <%= link_to "Add your idea!", new_idea_path if logged_in? %>
+			</ol>
+    	</td>
+    	<td>    		
+			<h2>People</h2>
+			<ol>
+			  <li>See People</li>
+			  <li>See People</li>
+			</ol>
+    	</td>
+    	<td>    		
+			<h2>Concrete</h2>
+			<ol>
+			  <li>See Concrete</li>
+			  <li>See Concrete</li>
+			  <li>See Concrete</li>
+			</ol>
+    	</td>
+    </tr>
+</table>

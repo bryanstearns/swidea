@@ -1,32 +1,14 @@
 ﻿body {
 }
 
-#mainleft
-{
-    margin-top: 100px;
-    width: 33%;
-    float: left;
-    background: #fff;
-    padding-bottom: 10px;
-    text-align: center;
+#mainbox {
+	padding-top: 30px;
+	width: 100%;
 }
 
-#maincenter
-{
-margin-top:100px;
-width:34%;
-float:left;
-background:#fff;
-padding-bottom:10px;
-    text-align: center;
-}
-
-#mainright
-{
-margin-top:100px;
-width:33%;
-float:left;
-background:#fff;
-padding-bottom:10px;
-    text-align: center;
+#mainbox td {
+	width: 26%;
+	vertical-align: top;
+    text-align: center;	
+	border: 1px solid #bbbbbb;
 }

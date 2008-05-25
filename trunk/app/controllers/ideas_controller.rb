@@ -81,7 +81,7 @@ class IdeasController < ApplicationController
     @idea.destroy
 
     respond_to do |format|
-      format.html { redirect_to(ideas_url) }
+      format.html { redirect_to(ideas_path) }
       format.xml  { head :ok }
     end
   end
