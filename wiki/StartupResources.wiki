@@ -21,7 +21,7 @@ Trac
 Jumpbox.com
 
 http://www.ideablob.com/
-     * Desciption: Ideablob.com is a community of small business owners and entrepreneurs who bounce ideas off each other. They give feedback, advice and much-needed encouragement. Every month, the community votes on the best idea. The winner gets $10,000 to help their idea grow. 
+* Desciption: Ideablob.com is a community of small business owners and entrepreneurs who bounce ideas off each other. They give feedback, advice and much-needed encouragement. Every month, the community votes on the best idea. The winner gets $10,000 to help their idea grow. 
 
 
 Palo Alto Software
@@ -31,4 +31,19 @@ Filinginoregon.org
 Myvidoop.com
 
 www.score.org
+
 * Description:  SCORE "Counselors to America's Small Business" is a nonprofit association dedicated to educating entrepreneurs and the formation, growth and success of small business nationwide. SCORE is a resource partner with the U.S. Small Business Administration (SBA).
+
+Additional Resources:
+
+* How-To
+
+* Business Tools 
+
+* Resource Links
+
+* Template Gallery
+
+* Business Quizzes
+
+* Tip of the Day
