@@ -10,12 +10,16 @@ www.angelsoft.net
       * Case Studies
       * Tutorials
 
-
 http://sourceforge.net/
+     * Desciption:
+SourceForge.net is the world's largest Open Source software development web site. SourceForge.net provides free hosting to Open Source software development projects with a centralized resource for managing projects, issues, communications, and code. 
 
 
-Sourceforge.net
+
 Code.google.com
+
+
+
 Trac
 Jumpbox.com
 Ideablob.com
