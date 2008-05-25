@@ -1,18 +1,28 @@
 List of Start-Up Weekend Resources
 
 *www.angelsoft.net
-    Free & Paid Content
-
-    Focuses on: 
-    -Manges Deal Flow
-    -Team Management
-    -Investment Collaboration
-
-    Additional Resources
-    -Case Studies
-    -Tutorials
+    *Free & Paid Content
+    *Focuses on: 
+      * Manges Deal Flow
+      *Team Management
+      *Investment Collaboration
+   *Additional Resources
+      *Case Studies
+      *Tutorials
 
 
+www.angelsoft.net
+
+
+Sourceforge.net
+Code.google.com
+Trac
+Jumpbox.com
+Ideablob.com
+Palo Alto Software
+Filinginoregon.org
+Myvidoop.com
+www.score.org
 
 = Details =
 
