@@ -14,8 +14,7 @@ http://www.bnet.com/
       *  Desciption:  Website owned by CNET providing comprehensive business management information and resources
 
 www.incorporate.com/business_startup_wizard.html
-      * Provides start-up wizard for a basic business start-up
-
+      * Provides start-up wizard for a basic business start-up.  Wizard can be tailored to specific business and state location.
 
 
 http://sourceforge.net/
