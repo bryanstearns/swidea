@@ -1,12 +1,12 @@
-<h1>Listing ideas</h1>
+<h1>Ideas</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Audience</th>
-    <th>Problem</th>
-    <th>Solution</th>
+    <th><%= link_to "Name", sort_param('search', Idea, "name") %></th>
+    <th><%= link_to "Description", sort_param('search', Idea, "description") %></th>
+    <th><%= link_to "Audience", sort_param('search', Idea, "audience") %></th>
+    <th><%= link_to "Problem", sort_param('search', Idea, "problem") %></th>
+    <th><%= link_to "Solution", sort_param('search', Idea, "solution") %></th>
   </tr>
 
 <% for idea in @ideas %>
@@ -25,5 +25,5 @@
 
 <br />
 
-<%= link_to 'New idea', new_idea_path %> |
+<%= link_to 'Add your idea', new_idea_path %> |
 <%= link_to 'Home', root_path %>

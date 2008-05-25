@@ -4,8 +4,9 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.xml
   def index
-    @ideas = Idea.find(:all)
-
+    add_to_sortable_columns('search', Idea)
+    @ideas = Idea.find(:all, :order => sortable_order('search', Idea, 'created_at'))
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @ideas }
@@ -43,7 +44,6 @@ class IdeasController < ApplicationController
   # POST /ideas.xml
   def create
     @idea = Idea.new(params[:idea])
-    @idea.owner = current_user
 
     respond_to do |format|
       if @idea.save
