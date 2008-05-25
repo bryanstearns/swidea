@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @idea.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @idea.description %>
+</p>
+
+<p>
+  <b>Audience:</b>
+  <%=h @idea.audience %>
+</p>
+
+<p>
+  <b>Problem:</b>
+  <%=h @idea.problem %>
+</p>
+
+<p>
+  <b>Solution:</b>
+  <%=h @idea.solution %>
+</p>
+
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>
