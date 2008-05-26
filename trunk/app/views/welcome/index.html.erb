@@ -1,6 +1,13 @@
+<% content_for :solo_stylesheets do %>
+  <%= stylesheet_link_tag 'reset-min', 'main', :media => 'screen, print' %>
+<% end %>
 
 <% content_for :header do %>
-<h1>Welcome to Idea2Profit</h1>
+<div id="header">
+<div id="headerlogo" >
+<span>Startup River Logo</span>
+</div>
+</div>
 <% end %>
 
 <% if logged_in? %>
@@ -11,39 +18,55 @@
   <%= link_to "Sign up", signup_path %>
 <% end %>
 
-<table id="mainbox">
-    <tr>
-    	<td>    		
-			<h2>Ideas</h2>
-			<ol>
-			  <% if @ideas.empty? %>
-			  <p>(New ideas coming soon!)</p>
-			  <% else %>
-			    <%= render :partial => @ideas %>
-			  <% end %>
-			  <%= link_to "More..", ideas_path %><br/>
-			  <%= link_to "Add your idea!", new_idea_path if logged_in? %>
-			</ol>
-    	</td>
-    	<td>    		
-			<h2>People</h2>
-			<ol>
-			  <% if @users.empty? %>
-			  <p>(Sign up! You can be first!)</p>
-			  <% else %>
-			    <%= render :partial => @users %>
-			  <% end %>
-			  <%= link_to "More..", users_path %><br/>
-			  <%= link_to "Sign up!", signup_path unless logged_in? %>
-			</ol>
-    	</td>
-    	<td>    		
-			<h2>Concrete</h2>
-			<ol>
-			  <li>See Concrete</li>
-			  <li>See Concrete</li>
-			  <li>See Concrete</li>
-			</ol>
-    	</td>
-    </tr>
-</table>
+<div id="content">
+
+<div id="ideas" >
+  <div id="ideas_static" class="static" onmouseover="getElementById('ideas_dynamic').className='dynamic highlighted'" onmouseout="getElementById('ideas_dynamic').className='dynamic unlit'">
+  </div>
+  <div id="ideas_dynamic" class="dynamic unlit">
+<em>Top Ideas</em>
+<hr />
+<ol>
+  <% if @ideas.empty? %>
+  <p>(New ideas coming soon!)</p>
+  <% else %>
+    <%= render :partial => @ideas %>
+  <% end %>
+  <%= link_to "More..", ideas_path %><br/>
+  <%= link_to "Add your idea!", new_idea_path if logged_in? %>
+</ol>
+  </div>
+</div>
+<div id="people">
+  <div id="people_static" class="static" onmouseover="getElementById('people_dynamic').className='dynamic highlighted'" onmouseout="getElementById('people_dynamic').className='dynamic unlit'">
+  </div>
+  <div id="people_dynamic" class="dynamic unlit">
+<em>Recent Teams</em>
+<hr />
+  <% if @users.empty? %>
+  <p>(Sign up! You can be first!)</p>
+  <% else %>
+    <%= render :partial => @users %>
+  <% end %>
+  <%= link_to "More..", users_path %><br/>
+  <%= link_to "Sign up!", signup_path unless logged_in? %>
+  </div>
+</div>
+<div id="collaborate">
+  <div id="collaborate_static" class="static" onmouseover="getElementById('collaborate_dynamic').className='dynamic highlighted'" onmouseout="getElementById('collaborate_dynamic').className='dynamic unlit'">
+  </div>
+  <div id="collaborate_dynamic" class="dynamic unlit">
+<em>Collaborations</em>
+<hr />
+  </div>
+</div>
+<div id="profit">
+  <div id="profit_static" class="static" onmouseover="getElementById('profit_dynamic').className='dynamic highlighted'" onmouseout="getElementById('profit_dynamic').className='dynamic unlit'">
+  </div>
+  <div id="profit_dynamic" class="dynamic unlit">
+<em>Successes</em>
+<hr />
+  </div>
+</div>
+</div>
+

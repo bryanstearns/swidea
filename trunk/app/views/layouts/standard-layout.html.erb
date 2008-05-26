@@ -6,9 +6,14 @@
   <% title = yield :title -%>
   <title><%= title %><%= ": " unless title.blank? %>Idea2Profit<%= " (#{ENV['RAILS_ENV']})" if ENV['RAILS_ENV'] != 'production' %></title>
   <%= javascript_include_tag :defaults %>
-  <%= stylesheet_link_tag 'scaffold', 'main', :media => 'screen, print' %>
-  <%= yield :additional_stylesheets %>
-  <%# stylesheet_link_tag 'print', :media => 'print' %>
+  <% solo_stylesheets = yield :solo_stylesheets %>
+  <% unless solo_stylesheets %>
+    <%= stylesheet_link_tag 'scaffold', 'main', :media => 'screen, print' %>
+    <%= yield :additional_stylesheets %>
+    <%# stylesheet_link_tag 'print', :media => 'print' %>
+  <% else %>
+    <%= solo_stylesheets %>
+  <% end %>
   <script type="text/javascript">
     <%= @content_for_page_scripts %>
   </script>
